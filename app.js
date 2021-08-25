@@ -5,10 +5,10 @@ const resultDisplay = document.getElementById('result');
 
 
 pad.addEventListener('click', e => {
-    
+
 
     switch(e.target.innerText) {
-        case 'AC': 
+        case 'AC':
             calculation.innerText = '';
             resultDisplay.innerText = '';
             break;
@@ -20,7 +20,7 @@ pad.addEventListener('click', e => {
         case '=':
             try {
                 let result = eval(calculation.innerText);
-                resultDisplay.innerText = result;
+                resultDisplay.innerText = result.toFixed(2);
             } catch {
                 resultDisplay.innerText = "Error"
             }
